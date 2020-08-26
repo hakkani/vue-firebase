@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      .canvas {
+        width: 300px;
+        height: 300px;
+        background-color: #ddd;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{title}}</h2>
-      <p>I earn {{ wage }} pounds per hours</p>
-      <!-- <button v-on:click="wage++">Increase 1 pound</button>
-      <button v-on:click="wage--">Decrease 1 pound</button> -->
-      <button v-on:click="changeWage(+1)">Increase 1 pound</button>
-      <button v-on:click="changeWage(-1)">Decrease 1 pound</button>
-      <button v-on:dblclick="changeWage(+5)">Increase 5 pound</button>
-      <button v-on:dblclick="changeWage(-5)">Decrease 5 pound</button>
+      <button @click="logEvent">Log Event</button>
+      <div class="canvas" @mousemove="logCoords">
+        {{coords.x}}, {{coords.y}}
+      </div>
     </div>
 
     <script src="./app.js"></script>
