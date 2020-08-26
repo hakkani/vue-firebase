@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      .one {
+        color: green;
+      }
+      .two {
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{title}}</h2>
       <p>{{ greet('morning') }}</p>
+      <!-- <a v-bind:href="url">Youtube</a> -->
+      <a :href="url">Youtube</a>
+      <div :class="classes">Classes form Vue instance</div>
+      <input type="text" :value="name" />
     </div>
 
     <script src="./app.js"></script>
