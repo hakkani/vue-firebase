@@ -4,9 +4,5 @@ new Vue({
     title: "Becoming a Vue ninja",
     name: "Ryu",
   },
-  methods: {
-    updateName(e) {
-      this.name = e.target.value;
-    },
-  },
+  methods: {},
 });
