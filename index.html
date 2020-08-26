@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <style>
-      .one {
-        color: green;
-      }
-      .two {
-        text-decoration: line-through;
-      }
-    </style>
   </head>
   <body>
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{title}}</h2>
-      <p>{{ greet('morning') }}</p>
-      <!-- <a v-bind:href="url">Youtube</a> -->
-      <a :href="url">Youtube</a>
-      <div :class="classes">Classes form Vue instance</div>
-      <input type="text" :value="name" />
+      <p>I earn {{ wage }} pounds per hours</p>
+      <!-- <button v-on:click="wage++">Increase 1 pound</button>
+      <button v-on:click="wage--">Decrease 1 pound</button> -->
+      <button v-on:click="changeWage(+1)">Increase 1 pound</button>
+      <button v-on:click="changeWage(-1)">Decrease 1 pound</button>
+      <button v-on:dblclick="changeWage(+5)">Increase 5 pound</button>
+      <button v-on:dblclick="changeWage(-5)">Decrease 5 pound</button>
     </div>
 
     <script src="./app.js"></script>
