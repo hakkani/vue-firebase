@@ -10,10 +10,10 @@
     <h1>Vue Basics</h1>
     <div id="app">
       <h2>{{title}}</h2>
-      <button @click="logMessage">Click Message</button>
-      <button @click.alt="logMessage">Click-alt Message</button>
-      <button @click.shift="logMessage">Click-shift Message</button>
-      <a href="www.https:://google.com" @click.prevent="logMessage">Google</a>
+      <p v-if="showName">Mario</p>
+      <p v-else-if="showAge">25</p>
+      <button @click="nameToggle">Toggle Name {{showName}}</button>
+      <button @click="ageToggle">Toggle Age {{showAge}}</button>
     </div>
 
     <script src="./app.js"></script>
